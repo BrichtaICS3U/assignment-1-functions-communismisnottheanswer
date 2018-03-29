@@ -14,9 +14,11 @@ def CtoF(C):
     """Input a temperature in Celicius to return a temperature in Fahrenheit
         C=Temperature in Celsius"""
     F = (1.8)*C+32
-
-    if C<-273.15:
-        return ("Invalid entry")
+    
+    while C<-273.15 :
+       
+        return ("Invalid entry please try again")
+        
 
     else:
         return (F)
@@ -26,8 +28,8 @@ def FtoC(F):
         F=Temperature in Fahrenheit"""
     C = (0.55556)*(F-32)
 
-    if F<-459.67:
-        return ("Invalid entry")
+    while F<-459.67:
+        return ("Invalid entry please try again")
 
     else:
         return (C)
@@ -39,14 +41,14 @@ def FtoC(F):
 pick = int(input('Enter 1 for Celsius or 2 for Fahrenheit: '))
 
 if pick == 1:
-
+   
     temperature = int(input('Enter your temperature in Celsius: '))
     print(CtoF(temperature))
-
+        
 elif pick == 2:
-
+   
     temperature = int(input('Enter your temperature in Fahrenheit: '))
     print(FtoC(temperature))
-
+       
 else:
-    print("learn how to count shithead")
+    print("Invalid number selection please try again")
